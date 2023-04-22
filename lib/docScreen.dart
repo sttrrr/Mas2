@@ -9,7 +9,13 @@ class DocScreen extends StatefulWidget {
 }
 
 class _DocScreenState extends State<DocScreen> {
-  final _textController = TextEditingController();
+  final _zakazController = TextEditingController();
+  final _faceController = TextEditingController();
+  final _obyazController = TextEditingController();
+  final _priceController = TextEditingController();
+  final _endController = TextEditingController();
+  final _garantController = TextEditingController();
+  final _fullEndController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _zakazController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Название ООО, ОАО...',
@@ -40,7 +46,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _faceController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'должность, ФИО',
@@ -53,7 +59,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _obyazController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'работы, которые необходимо выполнить',
@@ -66,7 +72,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _priceController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Числом, словами',
@@ -79,7 +85,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _endController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'День, месяц, год',
@@ -87,12 +93,12 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Размер гарантийных обязательств:',
+              'Размер гарантийных обязательств(руб):',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _garantController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'цифры, буквы',
@@ -105,7 +111,7 @@ class _DocScreenState extends State<DocScreen> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-              controller: _textController,
+              controller: _fullEndController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'день, месяц,год',
@@ -116,7 +122,13 @@ class _DocScreenState extends State<DocScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          final text = _textController.text;
+          final zakaz = _zakazController.text;
+          final face = _faceController .text;
+          final obyaz = _obyazController.text;
+          final price = _priceController.text;
+          final end = _endController.text;
+          final garant = _garantController.text;
+          final fullEnd = _fullEndController.text;
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => OrgScreen()));
         },
