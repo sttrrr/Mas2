@@ -34,7 +34,7 @@ const HomePage({ Key? key }) : super(key: key);
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text("Мои документы",
+                Text("Главная",
                 style: TextStyle(
                   fontSize: 30,
                   color: Colors.grey[500]
@@ -55,20 +55,20 @@ const HomePage({ Key? key }) : super(key: key);
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 children: [
-               MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы', items: "0", privacy: "Private Folder",  icon: Icon(Icons.lock_clock_outlined, color: Colors.green[500],)),
+               MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы', items: "0", privacy: "Private Folder",),
                   SizedBox(width: 15),
-                   MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ', items: "0", privacy: "Private Folder",  icon: Icon(Icons.lock_clock_outlined, color: Colors.amber[800],)),
+                   MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ', items: "0", privacy: "Private Folder",  ),
                    SizedBox(width: 15),
-                    MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки', items: "0", privacy: "Private Folder",  icon: Icon(Icons.lock_clock_outlined, color: Colors.purpleAccent[500],))
+                    MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Поданые заявки', items: "0", privacy: "Private Folder",)
                 ],
               ),
             ),
             SizedBox(height: 25,),
-            Text("Последнее :",
+            Text("Ваши активные тендеры:",
             style: TextStyle(
               fontSize: 25,
-             
-            ),)
+            ),),
+
           ],
         ),
       ),

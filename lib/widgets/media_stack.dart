@@ -6,16 +6,13 @@ class MediaStack extends StatelessWidget {
   final String media;
   final String items;
   final String privacy;
-
-  final Icon icon;
   const MediaStack(
       {Key? key,
       required this.image,
       required this.color,
       required this.media,
       required this.items,
-      required this.privacy,
-      required this.icon})
+      required this.privacy,})
       : super(key: key);
 
   @override
@@ -23,7 +20,7 @@ class MediaStack extends StatelessWidget {
     return Opacity(
       opacity: 0.8,
       child: Container(
-        height: 250,
+        height: 150,
         width: 165,
         decoration: BoxDecoration(
           color: color,
@@ -76,7 +73,7 @@ class MediaStack extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(left: 4),
-                      child: icon,
+
                     ),
                   ],
                 ),

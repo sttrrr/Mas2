@@ -42,6 +42,30 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
         ), HomeUserPage(),
 
       ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+            name: 'Тендеры',
+            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
+            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
+        ), HomePage(),
+
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+            name: 'Заявки',
+            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
+            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
+        ), HomePage(),
+
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+            name: 'Документы',
+            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
+            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
+        ), HomePage(),
+
+      ),
     ];
   }
 
@@ -57,7 +81,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                   color: Colors.indigo[100],
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Colors.indigo,
+                    color: Color.fromARGB(106, 76, 175, 79),
                     width: 2,
                   )
               ),
@@ -65,7 +89,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: IconButton(
 
-                  color: Colors.indigo,
+                  color: Color.fromARGB(106, 76, 175, 79),
                   onPressed: () {  }, icon: Icon(Icons.person),
                 ),
               ),
@@ -75,7 +99,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
         elevationAppBar: 0,
         slidePercent: 40,
         backgroundColorAppBar: Colors.white,
-        backgroundColorMenu: CupertinoColors.systemIndigo,
+        backgroundColorMenu: Color.fromARGB(106, 76, 175, 79),
     );
   }
 }
