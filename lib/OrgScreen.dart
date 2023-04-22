@@ -1,28 +1,27 @@
-import 'package:docum/OrgScreen.dart';
 import 'package:flutter/material.dart';
 
-class DocScreen extends StatefulWidget {
-  const DocScreen({Key? key}) : super(key: key);
+class OrgScreen extends StatefulWidget {
+  const OrgScreen({Key? key}) : super(key: key);
 
   @override
-  _DocScreenState createState() => _DocScreenState();
+  _OrgScreenState createState() => _OrgScreenState();
 }
 
-class _DocScreenState extends State<DocScreen> {
+class _OrgScreenState extends State<OrgScreen> {
   final _textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Государственный контракт'),
+        title: const Text('Сведения о заказчике'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
             const Text(
-              'Заказчик:',
+              'Юридический адрес:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -30,12 +29,24 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Название ООО, ОАО...',
+                hintText: 'Полный адрес',
+              ),
+            ),
+            const Text(
+              'Почтовый адрес:',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              controller: _textController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Полный адрес',
               ),
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Лицо представляющее орг.:',
+              'Телефон:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -43,12 +54,26 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'должность, ФИО',
+                hintText: '+7',
+              ),
+            ),
+            const SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
+            const Text(
+              'БИК:',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              controller: _textController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'телефон',
               ),
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Обязанности подрядчика:',
+              'e-mail:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -56,12 +81,26 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'работы, которые необходимо выполнить',
+                hintText: 'mail',
+              ),
+            ),
+
+            const SizedBox(height: 8.0),
+            const Text(
+              'ИНН:',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              controller: _textController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'ИНН',
               ),
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Стоимость работ по контракту:',
+              'КПП:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -69,12 +108,12 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Числом, словами',
+                hintText: 'КПП',
               ),
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Окончание работ:',
+              'расчетный счет:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -82,12 +121,12 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'День, месяц, год',
+                hintText: 'р/с',
               ),
             ),
             const SizedBox(height: 8.0),
             const Text(
-              'Размер гарантийных обязательств:',
+              'лицевой счет:',
               style: TextStyle(fontSize: 18.0),
             ),
             const SizedBox(height: 8.0),
@@ -95,20 +134,7 @@ class _DocScreenState extends State<DocScreen> {
               controller: _textController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'цифры, буквы',
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            const Text(
-              'Срок полного исполнения заказа:',
-              style: TextStyle(fontSize: 18.0),
-            ),
-            const SizedBox(height: 8.0),
-            TextField(
-              controller: _textController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'день, месяц,год',
+                hintText: 'л/с',
               ),
             ),
           ],
@@ -117,8 +143,8 @@ class _DocScreenState extends State<DocScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           final text = _textController.text;
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => OrgScreen()));
+          //Navigator.of(context).push(MaterialPageRoute(
+           //   builder: (context) => mainScreen()));
         },
         child: const Icon(Icons.arrow_right_alt),
       ),
