@@ -1,11 +1,8 @@
 import 'package:docum/OrgScreen.dart';
-import 'package:docum/widgets/big_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-import 'package:docx_template/docx_template.dart';
-
-import 'menu_page.dart';
+//import 'package:docx_template/docx_template.dart';
 
 class DocScreen extends StatefulWidget {
   const DocScreen({Key? key}) : super(key: key);
@@ -27,34 +24,9 @@ class _DocScreenState extends State<DocScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        leading: Row(
-        children: [
-        IconButton(
-        icon: Icon(
-        Icons.keyboard_backspace,
-        color: Colors.black
-    ), onPressed: () {
-
-    Navigator.of(context).push(MaterialPageRoute(
-    builder: (context) => HiddenDrawer()));
-    },),
-
-
-    ],
-    ),
-          actions: [
-            Row(
-
-              children: [
-                Padding(padding: EdgeInsets.only(right: 15),
-                  child:BigText(text: "Редактор", size: 18,),
-                )
-              ],
-            )
-          ],),
+      appBar: AppBar(
+        title: const Text('Государственный контракт'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
@@ -176,8 +148,8 @@ class _DocScreenState extends State<DocScreen> {
           final garant = _garantController.text;
           final fullEnd = _fullEndController.text;
           doc(zakaz, face,  work);
-         // Navigator.of(context).push(MaterialPageRoute(
-           //   builder: (context) => OrgScreen()));
+         Navigator.of(context).push(MaterialPageRoute(
+           builder: (context) => OrgScreen()));
         },
         child: const Icon(Icons.arrow_right_alt),
       ),
@@ -192,23 +164,6 @@ class _DocScreenState extends State<DocScreen> {
   final work,
   //final fullEnd
       ) async {
-    final f = File('assets/template.docx');
-    final docx = await DocxTemplate.fromBytes(await f.readAsBytes());
 
-
-
-    Content content = Content();
-    content
-      ..add(TextContent("number", "4"))
-      ..add(TextContent("zakazchik", zakaz))
-      ..add(TextContent("face", face))
-      ..add(TextContent("work", work));
-     // ..add(TextContent("price", price))
-      //..add(TextContent("end", end))
-     // ..add(TextContent("garant", garant))
-     // ..add(TextContent("fullEnd", fullEnd));
-    final docGenerated = await docx.generate(content);
-    final fileGenerated = File('assets/generated.docx');
-    if (docGenerated != null) await fileGenerated.writeAsBytes(docGenerated);
   }
 }
