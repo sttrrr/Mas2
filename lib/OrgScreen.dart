@@ -1,3 +1,4 @@
+import 'package:docum/signaturePage.dart';
 import 'package:flutter/material.dart';
 
 class OrgScreen extends StatefulWidget {
@@ -143,8 +144,8 @@ class _OrgScreenState extends State<OrgScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           final text = _textController.text;
-          //Navigator.of(context).push(MaterialPageRoute(
-           //   builder: (context) => mainScreen()));
+          Navigator.of(context).push(MaterialPageRoute(
+             builder: (context) => SignaturePage()));
         },
         child: const Icon(Icons.arrow_right_alt),
       ),
