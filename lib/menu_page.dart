@@ -1,5 +1,6 @@
 import 'package:docum/chat_screen.dart';
 import 'package:docum/home_page.dart';
+import 'package:docum/profile.dart';
 import 'package:docum/users/home_user_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +70,10 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                 child: IconButton(
 
                   color: Color.fromARGB(106, 76, 175, 79),
-                  onPressed: () {  }, icon: Icon(Icons.person),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Profile()));
+                  }, icon: Icon(Icons.person),
                 ),
               ),
             ),

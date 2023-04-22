@@ -2,6 +2,8 @@ import 'package:docum/widgets/document_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../docScreen.dart';
+
 class DocumentPage extends StatelessWidget {
   const DocumentPage ({Key? key}) : super(key: key);
 
@@ -11,7 +13,13 @@ class DocumentPage extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            DocumentWidget(name: 'Государственный контракт', conditions: 'conditions',),
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DocScreen()));
+              },
+              child: DocumentWidget(name: 'Государственный контракт', conditions: 'conditions',),
+            ),
             SizedBox(height: 10),
             DocumentWidget(name: 'ПРИКАЗ № 503-ПР',  conditions: 'conditions',),
             SizedBox(height: 10),
