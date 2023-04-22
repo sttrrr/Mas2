@@ -1,4 +1,5 @@
 import 'package:docum/OrgScreen.dart';
+import 'package:docum/employees.dart';
 import 'package:docum/widgets/big_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -39,7 +40,7 @@ class _DocScreenState extends State<DocScreen> {
     ), onPressed: () {
 
     Navigator.of(context).push(MaterialPageRoute(
-    builder: (context) => HiddenDrawer()));
+    builder: (context) => DocumentPage()));
     },),
 
 
