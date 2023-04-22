@@ -20,7 +20,7 @@ class DocumentPage extends StatelessWidget {
             IconButton(
               icon: Icon(
                   Icons.keyboard_backspace,
-                  color: Colors.black26
+                  color: Colors.black
               ), onPressed: () {
 
               Navigator.of(context).push(MaterialPageRoute(
