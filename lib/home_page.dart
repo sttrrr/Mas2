@@ -1,5 +1,4 @@
 import 'package:docum/resources/resources.dart';
-import 'package:docum/side.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:flutter/material.dart';
 
@@ -21,34 +20,7 @@ const HomePage({ Key? key }) : super(key: key);
           color: Colors.white,
         ),
       ),),
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        leading: SideMenu(),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.indigo[100],
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.indigo,
-                  width: 2,
-                )
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Icon(
-                  Icons.person,
-                  color: Colors.indigo,
-                  size: 23,
-                ),
-              ),
-            ),
-          )
-        ],
-      ),
+
       body: Container(
       color: Colors.white,
       child: Padding(

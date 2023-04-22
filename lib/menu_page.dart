@@ -64,7 +64,8 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
             ),
           )
         ],
-      elevationAppBar: 0,
+        elevationAppBar: 0,
+        slidePercent: 80,
         backgroundColorAppBar: Colors.white,
         backgroundColorMenu: CupertinoColors.systemIndigo,
     );
