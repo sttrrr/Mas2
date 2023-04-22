@@ -55,10 +55,10 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
               ),
               child: Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Icon(
-                  Icons.person,
+                child: IconButton(
+
                   color: Colors.indigo,
-                  size: 23,
+                  onPressed: () {  }, icon: Icon(Icons.arrow_right_alt),
                 ),
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:docum/docScreen.dart';
 import 'package:docum/resources/resources.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +16,14 @@ const HomePage({ Key? key }) : super(key: key);
       child: CircleAvatar(
         radius: 30,
         backgroundColor: Color(0xFF63cb99),
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
+        child: IconButton(
+
+          color: Colors.white, onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => DocScreen()));
+        }, icon: Icon(Icons.add),
         ),
       ),),
-
       body: Container(
       color: Colors.white,
       child: Padding(
