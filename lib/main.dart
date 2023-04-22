@@ -3,6 +3,7 @@ import 'package:docum/profile.dart';
 import 'package:docum/signaturePage.dart';
 import 'package:flutter/material.dart';
 
+import 'chat_screen.dart';
 import 'home_page.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home:  HiddenDrawer(),
+      home:  ChatScreens(),
     );
   }
 }

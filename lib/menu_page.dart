@@ -58,14 +58,14 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                 child: IconButton(
 
                   color: Colors.indigo,
-                  onPressed: () {  }, icon: Icon(Icons.arrow_right_alt),
+                  onPressed: () {  }, icon: Icon(Icons.person),
                 ),
               ),
             ),
           )
         ],
         elevationAppBar: 0,
-        slidePercent: 80,
+        slidePercent: 40,
         backgroundColorAppBar: Colors.white,
         backgroundColorMenu: CupertinoColors.systemIndigo,
     );
