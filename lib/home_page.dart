@@ -1,6 +1,7 @@
 import 'package:docum/docScreen.dart';
 import 'package:docum/resources/resources.dart';
 import 'package:docum/services/document_page.dart';
+import 'package:docum/services/employees.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:docum/widgets/modal_bottom.dart';
 import 'package:docum/widgets/tender_widget.dart';
@@ -67,7 +68,7 @@ class HomePage extends StatelessWidget {
                     GestureDetector(
                       onTap: (){
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => DocumentPage()));
+                            builder: (context) => Employess()));
 
                       },
                       child: MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),),
