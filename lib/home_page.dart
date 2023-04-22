@@ -1,10 +1,7 @@
-import 'package:docum/profile.dart';
 import 'package:docum/resources/resources.dart';
 import 'package:docum/side.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:flutter/material.dart';
-
-import 'docScreen.dart';
 
 class HomePage extends StatelessWidget {
 const HomePage({ Key? key }) : super(key: key);
@@ -19,12 +16,9 @@ const HomePage({ Key? key }) : super(key: key);
       child: CircleAvatar(
         radius: 30,
         backgroundColor: Color(0xFF63cb99),
-        child: IconButton(
-
-          color: Colors.white, onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => DocScreen()));
-        }, icon: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
         ),
       ),),
       appBar: AppBar(
