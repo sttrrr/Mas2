@@ -1,6 +1,6 @@
+import 'package:docum/menu_page.dart';
 import 'package:docum/profile.dart';
 import 'package:docum/signaturePage.dart';
-import 'package:docum/zoomPage.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home:  ZoomPage(),
+      home:  HiddenDrawer(),
     );
   }
 }
