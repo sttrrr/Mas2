@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
                   icon: Icon(
                     Icons.keyboard_backspace,
 
-                    color: Color(0xFF42C1C0),
+                    color: Colors.black,
                   ), onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(

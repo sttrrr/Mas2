@@ -1,8 +1,11 @@
 import 'package:docum/OrgScreen.dart';
+import 'package:docum/widgets/big_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
 import 'package:docx_template/docx_template.dart';
+
+import 'menu_page.dart';
 
 class DocScreen extends StatefulWidget {
   const DocScreen({Key? key}) : super(key: key);
@@ -24,9 +27,34 @@ class _DocScreenState extends State<DocScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Государственный контракт'),
-      ),
+        appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        leading: Row(
+        children: [
+        IconButton(
+        icon: Icon(
+        Icons.keyboard_backspace,
+        color: Colors.black
+    ), onPressed: () {
+
+    Navigator.of(context).push(MaterialPageRoute(
+    builder: (context) => HiddenDrawer()));
+    },),
+
+
+    ],
+    ),
+          actions: [
+            Row(
+
+              children: [
+                Padding(padding: EdgeInsets.only(right: 15),
+                  child:BigText(text: "Редактор", size: 18,),
+                )
+              ],
+            )
+          ],),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(

@@ -5,7 +5,7 @@ import 'package:docum/services/employees.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:docum/widgets/modal_bottom.dart';
 import 'package:docum/widgets/tender_widget.dart';
-import 'package:docum/zayavky.dart';
+import 'package:docum/services/zayavky.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/big_text_widget.dart';
@@ -51,42 +51,46 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20,),
+                Center(
+                  child: Container(
+                    height: 200,
 
-              Container(
-                height: 200,
-                child:ListView(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => DocumentPage()));
+                    child: ListView(
+                      physics: BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => DocumentPage()));
 
-                      },
-                   child: MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы',  privacy: "Private Folder"),),
-                    SizedBox(width: 15),
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Employess()));
+                          },
+                          child: MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы',  privacy: "Private Folder"),),
+                        SizedBox(width: 15),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Employess()));
 
-                      },
-                      child: MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),),
+                          },
+                          child: MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),),
 
-                    SizedBox(width: 15),
-                GestureDetector(
-                  onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ZayavkyPage()));
+                        SizedBox(width: 15),
+                        GestureDetector(
+                            onTap: (){
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ZayavkyPage()));
 
-            },
-                    child: MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки',  privacy: "Private Folder"))
+                            },
+                            child: MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки',  privacy: "Private Folder"))
 
 
-                  ],
+                      ],
+                    ) ,
+
+                  ),
                 ),
-              ),
+
               SizedBox(height: 25,),
               BigText(text: "Активные тендеры",),
               SizedBox(height: 25,),

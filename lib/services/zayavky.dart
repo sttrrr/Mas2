@@ -4,8 +4,8 @@ import 'package:docum/widgets/zayavky_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../docScreen.dart';
-import '../menu_page.dart';
+import '../../docScreen.dart';
+import '../../menu_page.dart';
 
 class ZayavkyPage extends StatelessWidget {
   const ZayavkyPage ({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class ZayavkyPage extends StatelessWidget {
               IconButton(
                 icon: Icon(
                     Icons.keyboard_backspace,
-                    color: Colors.black26
+                    color: Colors.black
                 ), onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(
