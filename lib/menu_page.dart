@@ -1,3 +1,4 @@
+import 'package:docum/chat_screen.dart';
 import 'package:docum/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
       ScreenHiddenDrawer(
         ItemHiddenMenu(
         name: 'Главная',
-        baseStyle: TextStyle(fontSize: 18),
+        baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
         selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
       ), HomePage(),
 
@@ -31,7 +32,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
             name: 'Чат',
             baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
             selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
-        ), HomePage(),
+        ), ChatScreens(),
 
       ),
     ];
