@@ -50,7 +50,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
   @override
   Widget build(BuildContext context) {
     return HiddenDrawerMenu(
-      leadingAppBar: Icon(Icons.menu, color: Colors.black,),
+      leadingAppBar: Icon(Icons.menu, color: Colors.black),
         screens: _pages,
 
         actionsAppBar: <Widget>[
@@ -61,7 +61,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Color.fromARGB(106, 76, 175, 79),
+                    color: Colors.black,
                     width: 2,
                   )
               ),
@@ -69,7 +69,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: IconButton(
 
-                  color: Color.fromARGB(106, 76, 175, 79),
+                  color: Colors.black,
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => Profile()));

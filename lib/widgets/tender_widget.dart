@@ -1,5 +1,6 @@
 import 'package:docum/widgets/small_text_widget.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import 'big_text_widget.dart';
 
@@ -52,10 +53,11 @@ class TenderWidget extends StatelessWidget {
                         text: name, size: 18,),
                       SmallText(
                           text:
-                          time),
+                          time, color: Colors.white,),
                       SmallText(
                           text:
-                          conditions),
+                          conditions,
+                        color: Colors.white,),
                     ],
                   ),
                 ),

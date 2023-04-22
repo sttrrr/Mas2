@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SmallText extends StatelessWidget {
@@ -12,7 +13,7 @@ class SmallText extends StatelessWidget {
         this.overflow=TextOverflow.ellipsis,
         this.height = 1.2,
         this.backgroundColor,
-        this.color = Colors.white,
+        this.color = CupertinoColors.black,
         this.size = 12,
         required this.text})
       : super(key: key);

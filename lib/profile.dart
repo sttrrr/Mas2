@@ -1,3 +1,5 @@
+import 'package:docum/menu_page.dart';
+import 'package:docum/services/document_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -37,11 +39,11 @@ class Profile extends StatelessWidget {
                   icon: Icon(
                     Icons.keyboard_backspace,
 
-                    color: Color(0xFF42C1C0),
+                      color: Colors.black26,
                   ), onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(
-                 builder: (context) => HomePage()));
+                 builder: (context) => HiddenDrawer()));
               },),
               title: const Text('Профиль', style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Colors.black)),
               backgroundColor: Colors.white,),),

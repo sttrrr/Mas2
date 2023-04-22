@@ -6,8 +6,14 @@ import 'big_text_widget.dart';
 
 class DocumentWidget extends StatelessWidget {
   final String name;
-  final  String conditions;
-  const DocumentWidget ({Key? key, required this.name,  required this.conditions,}) : super(key: key);
+  final String conditions;
+
+  const DocumentWidget(
+      {Key? key,
+        required this.name,
+        required this.conditions,
+        })
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

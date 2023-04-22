@@ -2,6 +2,7 @@ import 'package:docum/docScreen.dart';
 import 'package:docum/resources/resources.dart';
 import 'package:docum/services/document_page.dart';
 import 'package:docum/widgets/media_stack.dart';
+import 'package:docum/widgets/modal_bottom.dart';
 import 'package:docum/widgets/tender_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -55,16 +56,22 @@ class HomePage extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: [
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DocumentPage()));
 
-                   GestureDetector(
-                     onTap: (){
-    Navigator.of(context).push(MaterialPageRoute(
-    builder: (context) => DocumentPage()));
-
-                   },
+                      },
                    child: MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы',  privacy: "Private Folder"),),
                     SizedBox(width: 15),
-                    MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DocumentPage()));
+
+                      },
+                      child: MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),),
+
                     SizedBox(width: 15),
                     MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки',  privacy: "Private Folder")
 
@@ -77,13 +84,54 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 25,),
               Column(
                 children: [
-                  TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                        ),
+                          context: context,
+                          builder: (context)=> ModalBottom());
+                    },
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  ),
+
                   SizedBox(height: 15,),
-                  TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                          ),
+                          context: context,
+                          builder: (context)=> ModalBottom());
+                    },
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  ),
                   SizedBox(height: 15,),
-                  TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                          ),
+                          context: context,
+                          builder: (context)=> ModalBottom());
+                    },
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  ),
                   SizedBox(height: 15,),
-                  TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                          ),
+                          context: context,
+                          builder: (context)=> ModalBottom());
+                    },
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                  ),
                   SizedBox(height: 15,),
                 ],
               )
