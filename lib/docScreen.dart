@@ -1,5 +1,8 @@
 import 'package:docum/OrgScreen.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
+
+import 'package:docx_template/docx_template.dart';
 
 class DocScreen extends StatefulWidget {
   const DocScreen({Key? key}) : super(key: key);
@@ -16,6 +19,7 @@ class _DocScreenState extends State<DocScreen> {
   final _endController = TextEditingController();
   final _garantController = TextEditingController();
   final _fullEndController = TextEditingController();
+  final _workController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -117,11 +121,25 @@ class _DocScreenState extends State<DocScreen> {
                 hintText: 'день, месяц,год',
               ),
             ),
+            const Text(
+              'Работы:',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              controller: _workController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Работы',
+              ),
+            ),
+
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          final work = _workController.text;
           final zakaz = _zakazController.text;
           final face = _faceController .text;
           final obyaz = _obyazController.text;
@@ -129,11 +147,40 @@ class _DocScreenState extends State<DocScreen> {
           final end = _endController.text;
           final garant = _garantController.text;
           final fullEnd = _fullEndController.text;
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => OrgScreen()));
+          doc(zakaz, face,  work);
+         // Navigator.of(context).push(MaterialPageRoute(
+           //   builder: (context) => OrgScreen()));
         },
         child: const Icon(Icons.arrow_right_alt),
       ),
     );
+  }
+
+  void doc(final zakaz,final face,
+  //final obyaz ,
+  //final price,
+  //final end,
+  //final garant,
+  final work,
+  //final fullEnd
+      ) async {
+    final f = File("assets/template.docx");
+    final docx = await DocxTemplate.fromBytes(await f.readAsBytes());
+
+
+
+    Content content = Content();
+    content
+      ..add(TextContent("number", "4"))
+      ..add(TextContent("zakazchik", zakaz))
+      ..add(TextContent("face", face))
+      ..add(TextContent("work", work));
+     // ..add(TextContent("price", price))
+      //..add(TextContent("end", end))
+     // ..add(TextContent("garant", garant))
+     // ..add(TextContent("fullEnd", fullEnd));
+    final docGenerated = await docx.generate(content);
+    final fileGenerated = File('assets/generated.docx');
+    if (docGenerated != null) await fileGenerated.writeAsBytes(docGenerated);
   }
 }

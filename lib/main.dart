@@ -1,5 +1,6 @@
 import 'package:docum/menu_page.dart';
 import 'package:docum/profile.dart';
+import 'package:docum/services/document_page.dart';
 import 'package:docum/signaturePage.dart';
 import 'package:docum/users/home_user_page.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home:  HiddenDrawer(),
+      home:  DocumentPage(),
     );
   }
 }

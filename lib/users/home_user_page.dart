@@ -59,11 +59,11 @@ class HomeUserPage extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: [
-                    MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы', items: "0", privacy: "Private Folder",),
+                    MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы' , privacy: "Private Folder",),
                     SizedBox(width: 15),
-                    MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ', items: "0", privacy: "Private Folder", ),
+                    MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ' , privacy: "Private Folder", ),
                     SizedBox(width: 15),
-                    MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки', items: "0", privacy: "Private Folder",)
+                    MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки', privacy: "Private Folder",  )
                   ],
                 ),
               ),

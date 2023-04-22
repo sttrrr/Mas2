@@ -4,14 +4,12 @@ class MediaStack extends StatelessWidget {
   final String image;
   final Color color;
   final String media;
-  final String items;
   final String privacy;
   const MediaStack(
       {Key? key,
       required this.image,
       required this.color,
       required this.media,
-      required this.items,
       required this.privacy,})
       : super(key: key);
 
@@ -20,7 +18,7 @@ class MediaStack extends StatelessWidget {
     return Opacity(
       opacity: 0.8,
       child: Container(
-        height: 150,
+        height: 195,
         width: 165,
         decoration: BoxDecoration(
           color: color,
@@ -52,15 +50,6 @@ class MediaStack extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         color: Colors.grey[800],
                         fontSize: 18,
-                      ),
-                    ),
-                    SizedBox(height: 15,),
-                    Text(
-                      items,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey[700],
-                        fontSize: 10,
                       ),
                     ),
                     SizedBox(height: 15,),
