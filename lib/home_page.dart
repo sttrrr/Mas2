@@ -1,5 +1,6 @@
 import 'package:docum/docScreen.dart';
 import 'package:docum/resources/resources.dart';
+import 'package:docum/services/document_page.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:docum/widgets/tender_widget.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,13 @@ class HomePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: [
 
-                    MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы',  privacy: "Private Folder"),
+                   GestureDetector(
+                     onTap: (){
+    Navigator.of(context).push(MaterialPageRoute(
+    builder: (context) => DocumentPage()));
+
+                   },
+                   child: MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы',  privacy: "Private Folder"),),
                     SizedBox(width: 15),
                     MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),
                     SizedBox(width: 15),
