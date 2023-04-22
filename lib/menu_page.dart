@@ -24,8 +24,9 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
         ItemHiddenMenu(
         name: 'Главная',
         baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
-        selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
-      ), HomePage(),
+        selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18),
+      ),
+        HomePage(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -42,43 +43,21 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
         ), HomeUserPage(),
 
       ),
-      ScreenHiddenDrawer(
-        ItemHiddenMenu(
-            name: 'Тендеры',
-            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
-            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
-        ), HomePage(),
-
-      ),
-      ScreenHiddenDrawer(
-        ItemHiddenMenu(
-            name: 'Заявки',
-            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
-            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
-        ), HomePage(),
-
-      ),
-      ScreenHiddenDrawer(
-        ItemHiddenMenu(
-            name: 'Документы',
-            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
-            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
-        ), HomePage(),
-
-      ),
     ];
   }
 
   @override
   Widget build(BuildContext context) {
     return HiddenDrawerMenu(
+      leadingAppBar: Icon(Icons.menu, color: Colors.black,),
         screens: _pages,
+
         actionsAppBar: <Widget>[
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.indigo[100],
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: Color.fromARGB(106, 76, 175, 79),
