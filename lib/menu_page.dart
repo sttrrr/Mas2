@@ -36,9 +36,18 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
             selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
         ), ChatScreens(),
       ),
+
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-            name: 'Пользователь',
+            name: 'Тендеры',
+            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
+            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
+        ), HomeUserPage(),
+
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+            name: 'История операций',
             baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
             selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
         ), HomeUserPage(),

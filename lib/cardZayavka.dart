@@ -8,7 +8,7 @@ import 'home_page.dart';
 
 
 
-class Profile extends StatelessWidget {
+class CardZayavka extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,16 +34,16 @@ class Profile extends StatelessWidget {
               flexibleSpace: Container(),
               centerTitle: true,
               leading: IconButton(
-                  icon: Icon(
-                    Icons.keyboard_backspace,
+                icon: Icon(
+                  Icons.keyboard_backspace,
 
-                    color: Color(0xFF42C1C0),
-                  ), onPressed: () {
+                  color: Color(0xFF42C1C0),
+                ), onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(
-                 builder: (context) => HomePage()));
+                    builder: (context) => HomePage()));
               },),
-              title: const Text('Профиль', style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Colors.black)),
+              title: const Text('Заявка', style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Colors.black)),
               backgroundColor: Colors.white,),),
           body:
           Container(
@@ -58,29 +58,29 @@ class Profile extends StatelessWidget {
 
                   children: [
 
-                  //  CircleAvatar(
-                     // backgroundImage: AssetImage("assets/profile.png"),
-                     // radius: 30,
-                  //  ),
+                    //  CircleAvatar(
+                    // backgroundImage: AssetImage("assets/profile.png"),
+                    // radius: 30,
+                    //  ),
                     SizedBox(width: 41),
                     Center(
-                    child: Column(
+                      child: Column(
 
-                      children: [
-                        Text('Иван Иванов',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Color(0xFF35353D))),
-                        Text('Юридический отдел',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
-                        Text('Ведущий юрист',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
-                      ],
-                    ),),
+                        children: [
+                          Text('Иван Иванов',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Color(0xFF35353D))),
+                          Text('Юридический отдел',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
+                          Text('Ведущий юрист',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
+                        ],
+                      ),),
                     SizedBox(width: 44),
-                   // ImageIcon(
+                    // ImageIcon(
 
-                      //AssetImage("assets/edit.png"),
-                     // size: 25,
-                   // ),
+                    //AssetImage("assets/edit.png"),
+                    // size: 25,
+                    // ),
                   ],
                 ),
                 SizedBox(height: 50),
@@ -108,9 +108,9 @@ class Profile extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                         // ImageIcon(
-                            //  AssetImage("assets/myprofile.png")
-                        //  ),
+                          // ImageIcon(
+                          //  AssetImage("assets/myprofile.png")
+                          //  ),
                         ],
                       ),
                       SizedBox(width: 24),
@@ -166,8 +166,8 @@ class Profile extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           //ImageIcon(
-                         //     AssetImage("assets/notificaion.png")
-                         // ),
+                          //     AssetImage("assets/notificaion.png")
+                          // ),
                         ],
                       ),
                       SizedBox(width: 24),
@@ -213,9 +213,9 @@ class Profile extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                        //  ImageIcon(
-                        //      AssetImage("assets/time.png")
-                        //  ),
+                          //  ImageIcon(
+                          //      AssetImage("assets/time.png")
+                          //  ),
                         ],
                       ),
                       SizedBox(width: 24),

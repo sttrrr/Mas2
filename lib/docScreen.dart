@@ -164,7 +164,7 @@ class _DocScreenState extends State<DocScreen> {
   final work,
   //final fullEnd
       ) async {
-    final f = File("assets/template.docx");
+    final f = File('assets/template.docx');
     final docx = await DocxTemplate.fromBytes(await f.readAsBytes());
 
 

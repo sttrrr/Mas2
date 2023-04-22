@@ -4,6 +4,7 @@ import 'package:docum/services/document_page.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:docum/widgets/modal_bottom.dart';
 import 'package:docum/widgets/tender_widget.dart';
+import 'package:docum/zayavky.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/big_text_widget.dart';
@@ -73,7 +74,13 @@ class HomePage extends StatelessWidget {
                       child: MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ',  privacy: "Private Folder"),),
 
                     SizedBox(width: 15),
-                    MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки',  privacy: "Private Folder")
+                GestureDetector(
+                  onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ZayavkyPage()));
+
+            },
+                    child: MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки',  privacy: "Private Folder"))
 
 
                   ],
