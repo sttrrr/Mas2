@@ -1,29 +1,38 @@
+import 'package:docum/signaturePage.dart';
 import 'package:docum/widgets/small_text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'big_text_widget.dart';
+import '../cardZayavka.dart';
+import '../widgets/big_text_widget.dart';
+import '../widgets/modal_bottom.dart';
 
-class TenderWidget extends StatelessWidget {
+
+class DocumentUserWidget extends StatelessWidget {
   final String name;
-  final String time;
+  final String conditions;
 
-  final  String price;
-  const TenderWidget ({Key? key, required this.name, required this.time,  required this.price}) : super(key: key);
+
+  const DocumentUserWidget(
+      {Key? key,
+        required this.name,
+        required this.conditions,
+      })
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return    Container(
+    return   Container(
       margin: EdgeInsets.only(
-          right: 20,
-          left: 20,
-         ),
+        right: 15,
+        left: 15,
+      ),
       child: Row(
           children: [
             //текст
             Expanded(
               child: Container(
-                height: 85,
+                height: 185,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -41,7 +50,7 @@ class TenderWidget extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(
                       top: 10,
-                      bottom: 10,
+
                       left: 15,
                       right: 15),
                   child: Column(
@@ -53,12 +62,25 @@ class TenderWidget extends StatelessWidget {
                         text: name, size: 18,),
                       SmallText(
                           text:
-                          time, color: Colors.white,),
-                      SmallText(
-                          text:
-                          price,
-                        color: Colors.white,),
-
+                          conditions),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                              onPressed: (){
+                                showModalBottomSheet(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                                    ),
+                                    context: context,
+                                    builder: (context)=> SignaturePage());
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color.fromARGB(47, 156, 239, 160),
+                              ),
+                              child: SmallText(text: 'Расписаться')),
+                        ],
+                      )
                     ],
                   ),
                 ),

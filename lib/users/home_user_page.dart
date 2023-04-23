@@ -1,5 +1,6 @@
 import 'package:docum/docScreen.dart';
 import 'package:docum/resources/resources.dart';
+import 'package:docum/users/document_user_page.dart';
 import 'package:docum/widgets/media_stack.dart';
 import 'package:flutter/material.dart';
 
@@ -54,14 +55,20 @@ class HomeUserPage extends StatelessWidget {
               SizedBox(height: 20,),
 
               Container(
-                height: 250,
+                height: 200,
                 child:ListView(
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: [
-                    MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы' , privacy: "Private Folder",),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DocumentUserPage()));
+                      } ,child: MediaStack(image: Images.document, color: Color.fromARGB(106, 76, 175, 79), media: 'Документы' , privacy: "Private Folder",),
+                    ),
+
                     SizedBox(width: 15),
-                    MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сотрудники ' , privacy: "Private Folder", ),
+                    MediaStack(image: Images.person, color: Color.fromARGB(148, 255, 193, 79), media: 'Сертификаты ' , privacy: "Private Folder", ),
                     SizedBox(width: 15),
                     MediaStack(image: Images.request, color: Color.fromARGB(104, 223, 64, 79), media: 'Заявки', privacy: "Private Folder",  )
                   ],

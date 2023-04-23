@@ -3,6 +3,8 @@ import 'package:docum/widgets/small_text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'add_render_widget.dart';
+
 class ModalBottom extends StatelessWidget {
 
   const ModalBottom({Key? key}) : super(key: key);
@@ -64,21 +66,29 @@ class ModalBottom extends StatelessWidget {
                         bottom: 12,
                         left: 8),
                     decoration: BoxDecoration(
-
                         borderRadius: BorderRadius.circular(15)),
-                    child: Row(
+                    child:
+                    GestureDetector(
+                        onTap: (){
+                          showModalBottomSheet(
+                              isScrollControlled: true,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+                              ),
+                              context: context,
+                              builder: (context)=> AddTenderWidget());
+                        },child:Row(
                       children: [
                         BigText(
                           text:
-                          'Откликнуться',
+                          'Редактировать',
                           color: Color.fromARGB(
                               195, 76, 175, 79),
                         ),
-                        SizedBox(width: 5,),
-                        Icon(Icons.check, color: Color.fromARGB(
-                            195, 76, 175, 79),),
+
+
                       ],
-                    ))
+                    )) ),
               ],
             ),),
         ],

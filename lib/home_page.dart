@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
                           context: context,
                           builder: (context)=> ModalBottom());
                     },
-                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца",  price: "Цена от: 1566 руб/м.п"),
                   ),
 
                   SizedBox(height: 15,),
@@ -118,7 +118,7 @@ class HomePage extends StatelessWidget {
                           context: context,
                           builder: (context)=> ModalBottom());
                     },
-                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                    child: TenderWidget(name: "Наименование: Установка дорожных ограждений", time: "сроки: 2 месяца",  price: "Цена от: 1566 руб/м.п"),
                   ),
                   SizedBox(height: 15,),
                   GestureDetector(
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
                           context: context,
                           builder: (context)=> ModalBottom());
                     },
-                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца",  price: "Цена от: 1566 руб/м.п"),
                   ),
                   SizedBox(height: 15,),
                   GestureDetector(
@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                           context: context,
                           builder: (context)=> ModalBottom());
                     },
-                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", conditions: "Рабочая сила", price: "1566 руб/м.п"),
+                    child: TenderWidget(name: "Установка дорожных ограждений", time: "2 месяца", price: "Цена от: 1566 руб/м.п"),
                   ),
                   SizedBox(height: 15,),
                 ],

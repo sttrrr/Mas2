@@ -15,7 +15,7 @@ class _SignaturePageState extends State<SignaturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign th"),
+        title: Text("Распишитесть в поле"),
         actions: [
           TextButton(
             onPressed: () {},

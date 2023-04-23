@@ -10,6 +10,7 @@ class EmployessWidget extends StatelessWidget {
   final String departament;
   final String inn;
 
+
   const EmployessWidget(
       {Key? key,
         required this.name,

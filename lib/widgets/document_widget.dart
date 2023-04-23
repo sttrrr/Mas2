@@ -2,6 +2,7 @@ import 'package:docum/widgets/small_text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../docScreen.dart';
 import 'big_text_widget.dart';
 
 class DocumentWidget extends StatelessWidget {
@@ -62,7 +63,15 @@ class DocumentWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.of(context).push(MaterialPageRoute(
+                                        builder: (context) => DocScreen()));
+                                  },
+                                  child: DocumentWidget(name: 'Государственный контракт', conditions: 'conditions',),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xFF63cb99),
                               ),
