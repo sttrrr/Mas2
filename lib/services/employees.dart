@@ -46,6 +46,18 @@ class Employess extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(height: 10),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Поиск...',
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      // Обработчик нажатия на иконку фильтрации
+                    },
+                    icon: Icon(Icons.filter_list),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
           EmployessWidget(name: 'Иванов Иван Иванович', surname: 'Паспорт: 0377 774789',inn: 'ИНН: 4563741516',departament: 'Отдел: Бухгалтерия',),
               SizedBox(height: 10),
               EmployessWidget(name: 'Мельникова Ксения Витальевна', surname: 'Паспорт: 0377 774789',inn: 'ИНН: 4563741516',departament: 'Отдел: Бухгалтерия',),

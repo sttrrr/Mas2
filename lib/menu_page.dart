@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
+import 'notifications.dart';
+
 class HiddenDrawer extends StatefulWidget {
   const HiddenDrawer({Key? key}) : super(key: key);
 
@@ -55,6 +57,14 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
         ), HomeUserPage(),
 
       ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+            name: 'Уведомления',
+            baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
+            selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
+        ), NotificationsPage(),
+
+      ),
     ];
     _userPages = [
       ScreenHiddenDrawer(
@@ -87,7 +97,14 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
             baseStyle: TextStyle(fontSize: 18,color: Colors.white60,),
             selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18)
         ), HomeUserPage(),
-
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+          name: 'Уведомления',
+          baseStyle: TextStyle(fontSize: 18,color: Colors.white60, ),
+          selectedStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18),
+        ),
+        NotificationsPage(),
       ),
     ];
   }

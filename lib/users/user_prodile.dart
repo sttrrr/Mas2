@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 //import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get.dart';
 
-import 'home_page.dart';
-import 'menu_page.dart';
+import '../home_page.dart';
+import '../menu_page.dart';
 
 
 
@@ -35,14 +35,14 @@ class Profile extends StatelessWidget {
               flexibleSpace: Container(),
               centerTitle: true,
               leading: IconButton(
-                  icon: Icon(
-                    Icons.keyboard_backspace,
+                icon: Icon(
+                  Icons.keyboard_backspace,
 
-                    color: Colors.black,
-                  ), onPressed: () {
+                  color: Colors.black,
+                ), onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(
-                 builder: (context) => HiddenDrawer()));
+                    builder: (context) => HiddenDrawer()));
               },),
               title: const Text('Профиль', style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Colors.black)),
               backgroundColor: Colors.white,),),
@@ -59,29 +59,29 @@ class Profile extends StatelessWidget {
 
                   children: [
 
-                  //  CircleAvatar(
-                     // backgroundImage: AssetImage("assets/profile.png"),
-                     // radius: 30,
-                  //  ),
+                    //  CircleAvatar(
+                    // backgroundImage: AssetImage("assets/profile.png"),
+                    // radius: 30,
+                    //  ),
                     SizedBox(width: 41),
                     Center(
-                    child: Column(
+                      child: Column(
 
-                      children: [
-                        Text('Иван Иванов',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Color(0xFF35353D))),
-                        Text('Юридический отдел',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
-                        Text('Ведущий юрист',
-                            style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
-                      ],
-                    ),),
+                        children: [
+                          Text('Иван Иванов',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 24,color: Color(0xFF35353D))),
+                          Text('ООО "ЮгИнвестСтрой"',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
+                          Text('Генеральный директор',
+                              style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xFF35353D))),
+                        ],
+                      ),),
                     SizedBox(width: 44),
-                   // ImageIcon(
+                    // ImageIcon(
 
-                      //AssetImage("assets/edit.png"),
-                     // size: 25,
-                   // ),
+                    //AssetImage("assets/edit.png"),
+                    // size: 25,
+                    // ),
                   ],
                 ),
                 SizedBox(height: 50),
@@ -109,9 +109,9 @@ class Profile extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                         // ImageIcon(
-                            //  AssetImage("assets/myprofile.png")
-                        //  ),
+                          // ImageIcon(
+                          //  AssetImage("assets/myprofile.png")
+                          //  ),
                         ],
                       ),
                       SizedBox(width: 24),
@@ -120,7 +120,7 @@ class Profile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Мой профиль',
+                            'Мои тендеры',
                             style: TextStyle(
                               fontFamily: 'Nunito',
                               fontWeight: FontWeight.w600,
@@ -142,7 +142,7 @@ class Profile extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                    'Доступ',
+                    'Мои документы',
                     textAlign: TextAlign.left,
                     style: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 25,color: Color(0xFF35353D))
                 ),
@@ -167,8 +167,8 @@ class Profile extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           //ImageIcon(
-                         //     AssetImage("assets/notificaion.png")
-                         // ),
+                          //     AssetImage("assets/notificaion.png")
+                          // ),
                         ],
                       ),
                       SizedBox(width: 24),
@@ -177,7 +177,7 @@ class Profile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Договоры с заказчиками',
+                            'Сертификаты',
                             style: TextStyle(
                               fontFamily: 'Nunito',
                               fontWeight: FontWeight.w600,
@@ -214,9 +214,9 @@ class Profile extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                        //  ImageIcon(
-                        //      AssetImage("assets/time.png")
-                        //  ),
+                          //  ImageIcon(
+                          //      AssetImage("assets/time.png")
+                          //  ),
                         ],
                       ),
                       SizedBox(width: 24),
@@ -225,7 +225,7 @@ class Profile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Договоры с субподрядчиками',
+                            'Договоры',
                             style: TextStyle(
                               fontFamily: 'Nunito',
                               fontWeight: FontWeight.w600,

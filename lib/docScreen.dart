@@ -40,7 +40,7 @@ class _DocScreenState extends State<DocScreen> {
     ), onPressed: () {
 
     Navigator.of(context).push(MaterialPageRoute(
-    builder: (context) => DocumentPage()));
+    builder: (context) => HiddenDrawer()));
     },),
 
 

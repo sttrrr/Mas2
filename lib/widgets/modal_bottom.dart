@@ -81,7 +81,7 @@ class ModalBottom extends StatelessWidget {
                       children: [
                         BigText(
                           text:
-                          'Редактировать',
+                          'Откликнуться',
                           color: Color.fromARGB(
                               195, 76, 175, 79),
                         ),

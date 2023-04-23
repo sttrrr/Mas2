@@ -46,6 +46,18 @@ class ZayavkyPage extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(height: 10),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Поиск...',
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      // Обработчик нажатия на иконку фильтрации
+                    },
+                    icon: Icon(Icons.filter_list),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
               GestureDetector(
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(

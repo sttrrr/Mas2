@@ -46,11 +46,33 @@ class AddTenderWidget extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10,),
-            TextField(
-              decoration: InputDecoration(
-                  hintText: "Примечание"
-              ),
-            ),
+            Container(
+              height: 85,
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      padding: EdgeInsets.only(
+                          top: 12,
+                          bottom: 12,
+                          left: 8),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Row(
+                        children: [
+                          BigText(
+                            text:
+                            'Прикрепить документ',
+                            color: Color.fromARGB(
+                                195, 76, 175, 79),
+                          ),
+
+                        ],
+                      ))
+                ],
+              ),),
             SizedBox(height: 10,),
             Container(
               height: 85,
