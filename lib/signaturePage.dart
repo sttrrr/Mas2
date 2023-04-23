@@ -1,6 +1,7 @@
 import 'package:docum/widgets/big_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
+import 'package:open_filex/open_filex.dart';
 
 class SignaturePage extends StatefulWidget {
   const SignaturePage({Key? key}) : super(key: key);
@@ -11,7 +12,15 @@ class SignaturePage extends StatefulWidget {
 
 class _SignaturePageState extends State<SignaturePage> {
   final keySignaturePad = GlobalKey<SfSignaturePadState>();
+  var _openResult = 'Unknown';
+  Future<void> openFile() async {
+    const filePath = '/assets/hh.docx';
+    final result = await OpenFilex.open(filePath);
 
+    setState(() {
+      _openResult = "type=${result.type}  message=${result.message}";
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +30,7 @@ class _SignaturePageState extends State<SignaturePage> {
         actions: [
               Center(
                 child:Padding(padding: EdgeInsets.only(right: 15),
-                  child:BigText(text: "Роспишитесь", size: 18,),
+                  child:BigText(text: "Распишитесь", size: 18,),
                 ) ,
               )
 
@@ -56,9 +65,8 @@ class _SignaturePageState extends State<SignaturePage> {
                 SizedBox(width: 150,),
                 Container(
                   width: 70,
-                  child: IconButton(onPressed: (){
-                    Navigator.pop(context);
-                  },
+                  child: IconButton(onPressed: openFile,
+
                       icon: Icon(Icons.check, color: Colors.green, size: 50,)
                   ),
                 )
@@ -68,5 +76,6 @@ class _SignaturePageState extends State<SignaturePage> {
         ],
       ),
     );
+
   }
 }
