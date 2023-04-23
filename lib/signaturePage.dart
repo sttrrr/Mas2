@@ -1,3 +1,4 @@
+import 'package:docum/widgets/big_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
 
@@ -15,15 +16,16 @@ class _SignaturePageState extends State<SignaturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Распишитесть в поле"),
+        elevation: 0.0,
+        backgroundColor: Colors.white,
         actions: [
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              "Clear",
-            ),
-            style: TextButton.styleFrom(foregroundColor: Colors.white),
-          )
+              Center(
+                child:Padding(padding: EdgeInsets.only(right: 15),
+                  child:BigText(text: "Роспишитесь", size: 18,),
+                ) ,
+              )
+
+
         ],
       ),
       body: Column(
@@ -31,11 +33,37 @@ class _SignaturePageState extends State<SignaturePage> {
         children: [
           Center(
             child: Container(
-              width: 250,
+              width: 300,
                 child: SfSignaturePad(
               key: keySignaturePad,
               backgroundColor: Color.fromARGB(87, 76, 175, 79),
             )),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 25, right: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 100,),
+                Container(
+                  width: 70,
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },
+                      icon: Icon(Icons.close, color: Colors.red, size: 50,)
+                  ),
+                ),
+                SizedBox(width: 150,),
+                Container(
+                  width: 70,
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },
+                      icon: Icon(Icons.check, color: Colors.green, size: 50,)
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),

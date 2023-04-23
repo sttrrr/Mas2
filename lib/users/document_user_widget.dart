@@ -36,7 +36,7 @@ class DocumentUserWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromARGB(47, 156, 239, 160).
+                      color: Color.fromARGB(104,200, 64, 150).
                       withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 5,
@@ -45,7 +45,7 @@ class DocumentUserWidget extends StatelessWidget {
                   borderRadius: BorderRadius.all(
                     Radius.circular(15),
                   ),
-                  color: Color.fromARGB(106, 76, 175, 79),
+                  color: Color.fromARGB(104, 223, 64, 79),
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(
@@ -76,9 +76,9 @@ class DocumentUserWidget extends StatelessWidget {
                                     builder: (context)=> SignaturePage());
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(47, 156, 239, 160),
+                                backgroundColor: Color.fromARGB(50, 223, 0, 100),
                               ),
-                              child: SmallText(text: 'Расписаться')),
+                              child: SmallText(text: 'Подписать')),
                         ],
                       )
                     ],
